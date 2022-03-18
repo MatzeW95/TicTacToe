@@ -13,6 +13,9 @@ body {
     font-weight: 400;
     color: var(--fontColor);
 
+    margin: 0px;
+    padding: 0px;
+
     background-color: var(--backgroundBody);
 }
 
@@ -69,6 +72,7 @@ h1 {
     cursor: pointer;
     font-size: 6.5rem;
     text-align: center;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 
 #field1 {
@@ -114,4 +118,17 @@ h1 {
 
 #field9 {
     grid-area: 3 / 3 / 4 / 4;
+}
+
+@media screen and (max-width: 450px) {
+    
+    #containerMain {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .field {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
 }
