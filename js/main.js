@@ -66,7 +66,6 @@ function getInput(fieldNumber) {
         }
         else {
             if(checkDraw() == false) {
-                console.log(fieldStatus);
                 changeTurn();
             }
         }
