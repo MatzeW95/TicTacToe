@@ -65,7 +65,10 @@ function getInput(fieldNumber) {
             buttonReset.style.visibility = "visible";
         }
         else {
-            changeTurn();
+            if(checkDraw() == false) {
+                console.log(fieldStatus);
+                changeTurn();
+            }
         }
     }
 }
@@ -126,5 +129,26 @@ function checkWin(player) {
         win = true;
     }
 
+    return win;
+}
+
+function checkDraw() {
+
+    var drawCounter = 0;
+
+    for(var x = 0; x < fieldStatus.length; x++) {
+        
+        if(fieldStatus[x] != "" && fieldStatus[x] == "X" || fieldStatus[x] == "O") {
+            drawCounter = drawCounter + 1;
+        }
+    }
+
+    if(drawCounter == 9) {
+        win = true;
+        
+        pStatus.innerHTML = "No winner: Draw";
+        buttonReset.style.visibility = "visible";
+    }
+    
     return win;
 }
