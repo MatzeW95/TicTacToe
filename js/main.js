@@ -1,5 +1,11 @@
 var field = document.getElementsByClassName("field");
 var pStatus = document.getElementById("pStatus");
+var buttonReset = document.getElementById("buttonReset");
+
+buttonReset.addEventListener("click", function(){
+    reset();
+    buttonReset.style.visibility = "hidden";
+});
 
 field[0].addEventListener("click", function(){
     getInput(0);
@@ -34,6 +40,7 @@ var turnX = true;
 var win = false;
 
 function reset() {
+    win = false;
     fieldStatus = [];
 
     for(var x = 0; x < field.length; x++) {
@@ -50,10 +57,12 @@ function getInput(fieldNumber) {
         setInput(fieldNumber);
 
         if(checkWin("X") == true) {
-            console.log("Winner: X");
+            pStatus.innerHTML = "Winner: X";
+            buttonReset.style.visibility = "visible";
         }
         else if(checkWin("O") == true) {
-            console.log("Winner: O");
+            pStatus.innerHTML = "Winner: O";
+            buttonReset.style.visibility = "visible";
         }
         else {
             changeTurn();
