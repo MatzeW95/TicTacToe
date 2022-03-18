@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
+:root {
+    --backgroundBody: rgb(2, 62, 138);
+    --backgroundGame: rgb(0, 119, 182);
+    --borderColor: rgb(0, 150, 199);
+    --fontColor: rgb(255, 255, 255);
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
+    color: var(--fontColor);
+
+    background-color: var(--backgroundBody);
 }
 
 #containerMain {
@@ -15,15 +25,33 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
 #pStatus {
-    color: red;
+    font-size: 1.3rem;
 }
 
 #buttonReset {
     visibility: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--fontColor);
+    background-color: var(--backgroundBody);
+    color: var(--fontColor);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
 }
 
 #containerGame {
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+    background-color: var(--backgroundGame);
+    padding: 0.5rem;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -48,8 +76,8 @@ body {
 
 #field2 {
     grid-area: 1 / 2 / 2 / 3;
-    border-left: 2px solid green;
-    border-right: 2px solid green;
+    border-left: 2px solid var(--borderColor);
+    border-right: 2px solid var(--borderColor);
 }
 
 #field3 {
@@ -58,19 +86,19 @@ body {
 
 #field4 {
     grid-area: 2 / 1 / 3 / 2;
-    border-top: 2px solid green;
-    border-bottom: 2px solid green;
+    border-top: 2px solid var(--borderColor);
+    border-bottom: 2px solid var(--borderColor);
 }
 
 #field5 {
     grid-area: 2 / 2 / 3 / 3;
-    border: 2px solid green;
+    border: 2px solid var(--borderColor);
 }
 
 #field6 {
     grid-area: 2 / 3 / 3 / 4;
-    border-top: 2px solid green;
-    border-bottom: 2px solid green;
+    border-top: 2px solid var(--borderColor);
+    border-bottom: 2px solid var(--borderColor);
 }
 
 #field7 {
@@ -79,8 +107,8 @@ body {
 
 #field8 {
     grid-area: 3 / 2 / 4 / 3;
-    border-left: 2px solid green;
-    border-right: 2px solid green;
+    border-left: 2px solid var(--borderColor);
+    border-right: 2px solid var(--borderColor);
 }
 
 #field9 {
