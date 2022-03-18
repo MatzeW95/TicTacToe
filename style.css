@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#containerMain {
+    width: 40%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pStatus {
+    color: red;
+}
+
+#containerGame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.field {
+    width: 8rem;
+    height: 8rem;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#field1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#field2 {
+    grid-area: 1 / 2 / 2 / 3;
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+}
+
+#field3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#field4 {
+    grid-area: 2 / 1 / 3 / 2;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+}
+
+#field5 {
+    grid-area: 2 / 2 / 3 / 3;
+    border: 2px solid green;
+}
+
+#field6 {
+    grid-area: 2 / 3 / 3 / 4;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+}
+
+#field7 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#field8 {
+    grid-area: 3 / 2 / 4 / 3;
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+}
+
+#field9 {
+    grid-area: 3 / 3 / 4 / 4;
+}
